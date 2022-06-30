@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main_page_web</title>
+    <link rel="stylesheet" href="./main.css">
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+
+    <!-- SWIPER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.css" />
+
+    <script src="https://kit.fontawesome.com/b1d3c025ef.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <script defer src="./main.js"></script>
+    
+</head>
+<body>
+    <div id="container">
+        <video src="./video/김희수작가 인터뷰 필름 l Artist Interview film.mp4" muted autoplay loop>
+        </video>
+        <header id="header">
+            <div class="innerheader">
+                <div class="ham_btn">
+
+                     <div id="menu">
+
+                        <div id="menu-bar" onclick="menuOnClick()">
+                            <div id="bar1" class="bar"></div>
+                            <div id="bar2" class="bar"></div>
+                            <div id="bar3" class="bar"></div>
+                        </div><!--menu-bar-->
+
+                     </div><!--menu-->
+                </div><!--ham_btn-->
+
+                <div class="menu_bg" id="menu_bg" onclick="bgOnClick()">
+                    <nav class="nav" id="nav">
+                        <ul>
+                            <li><a href="#">홈</a></li>
+                            <li><a href="#">미술품경매</a></li>
+                            <li><a href="#">온라인 전시장</a></li>
+                            <li><a href="#">경매소개</a></li>
+                            <li><a href="#">커뮤니티</a></li>
+                            <li><a href="#">문의사항</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="logo">
+                    <img src="./img/logo_png.png" alt="">
+                </div>
+                <div class="right">
+                    <div class="searchBtn" id="searchBtn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </div><!--innerheader-->
+        </header><!--header-->
+
+        <div class="search_bg">
+            <form>
+                <input type="text" name="search" id="search">
+                <button type="button" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </div><!--container-->
+
+    <section class="auction">
+        <div class="auc_inner">
+            <p class="title">온라인 경매 안내</p>
+            <ul class="howTo">
+                <li>회원가입</li><i class="fa-solid fa-angle-right"></i>
+                <li>적립금 입금</li><i class="fa-solid fa-angle-right"></i>
+                <li>적립금 구매</li><i class="fa-solid fa-angle-right"></i>
+                <li>신청승인</li><i class="fa-solid fa-angle-right"></i>
+                <li>경매입찰</li><i class="fa-solid fa-angle-right"></i>
+                <li>낙찰</li><i class="fa-solid fa-angle-right"></i>
+                <li>배송</li>
+            </ul>
+            <a href="#" class="detail">자세히 보기</a>
+        </div>
+    </section>
+    
+   
+    <section class="section">
+         <span class="title">오늘의 작품</span>
+         <span class="title01">진행중인 경매</span>
+        <div class="section01">
+          <div class="sec_left">
+          <div class="swiper">
+          <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="#"><img src="./img/oimg01.jpg" alt="">
+          <p class="name">초르산비예프.Ch.M</p>
+          <p class="label">Pheshin</p>
+          </a></div>
+          <div class="swiper-slide"><a href="#"><img src="./img/oimg02.jpg" alt="">
+          <p class="name">체렌나드미드 첵미드</p>
+          <p class="label">신화</p>
+          </a></div>
+          <div class="swiper-slide"><a href="#"><img src="./img/oimg03.jpg" alt="">
+          <p class="name">홀마토프</p>
+          <p class="label">부하라1</p>
+          </a></div>
+          <div class="swiper-slide"><a href="#"><img src="./img/img22.jpg" alt="">
+          <p class="name">중쇼우치</p>
+          <p class="label">바캉스</p>
+          </a></div>
+          <div class="swiper-slide"><a href="#"><img src="./img/oimg05.jpg" alt="">
+          <p class="name">림룡순</p>
+          <p class="label">조석</p>
+          </a></div>
+        </div><!--swiper-wrapper-->
+        </div><!--swiper-->
+        </div><!--sec_left-->
+                
+          <div class="sec_right">
+            <div class="sec_img_top">
+                <div class="sec_img01 img">
+                    <a href="#">
+                    <div class="art_img">
+                    <img src="./img/img02.jpg" alt="">
+                    <img src="./img/hover01.jpg" alt="" class="hover_img">
+                    </div>
+                    </a>
+                    <p class="name">김영민</p>
+                    <p class="label">동트는 아침바다 마음에 에너지</p>
+                    <div class="price">
+                        <span>현재가격</span>
+                        <p>KRW 400,000</p>
+                    </div><!--price--> 
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-regular fa-heart"></i> 
+                </div><!--sec_img01-->
+
+                <div class="sec_img01 img">
+                    <a href="#">
+                    <div class="art_img">
+                    <img src="./img/main06.jpg" alt="">
+                    <img src="./img/hover02.jpg" alt="" class="hover_img">
+                    </div>
+                    </a>
+                    <p class="name">김영민</p>
+                    <p class="label">하마</p>
+                    <div class="price">
+                        <span>현재가격</span>
+                        <p>KRW 500,000</p>
+                    </div><!--price-->
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-regular fa-heart"></i> 
+                </div><!--sec_img01-->
+                </div><!--sec_img_top-->
+
+
+                <div class="sec_img_bottom">
+                    <div class="sec_img01 img">
+                    <a href="#">
+                    <div class="art_img">
+                    <img src="./img/img17.jpg" alt="">
+                    <img src="./img/hover05.jpg" alt="" class="hover_img">
+                    </div>
+                    </a>
+                    <p class="name">전진진</p>
+                    <p class="label">제 5의 계절-평화</p>
+                    <div class="price">
+                        <span>현재가격</span>
+                        <p>KRW 800,000</p>
+                    </div><!--price-->
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-regular fa-heart"></i> 
+                </div><!--sec_img01-->
+
+
+                <div class="sec_img01 img">
+                    <a href="#">
+                    <div class="art_img">   
+                    <img src="./img/nimg06.jpg" alt="">
+                    <img src="./img/hover06.jpg" alt="" class="hover_img">
+                    </div>
+                    </a>
+                    <p class="name">한미키</p>
+                    <p class="label">인체 H-123</p>
+                    <div class="price">
+                        <span>현재가격</span>
+                        <p>KRW 200,000</p>
+                    </div><!--price-->
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-regular fa-heart"></i> 
+                </div><!--sec_img01-->
+                </div><!--sec_img_bottom-->
+                </div><!--sec_right-->
+                
+        </div><!--section01-->
+    </section><!--section-->
+
+    <div class="info">
+        <div class="info01">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/slide01.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/slide02.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/slide03.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/slide04.jpg" alt=""></div>
+                </div><!--swiper-wrapper-->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div><!--swiper--> 
+        </div><!--info01-->
+
+    <div class="info02">
+            <a href="#"><img src="./img/nimg10.jpg" alt="">
+            <div class="info02_text">
+            <h2>위탁안내</h2>
+            <p>소장품을 소개해보세요.</p>
+            </div><!--info02_text-->
+            </a>
+        </div><!--info02-->
+    </div><!--info-->
+
+    <div class="slogan">
+        <div class="slogan_inner">
+        <p>포털아트는 미술품 대중화에 앞장서고 있는 온라인 경매회사입니다.</p>
+        <div class="slogan_text">
+        <a href="#"><span>이용안내 바로가기</span></a>
+        <a href="#"><span>미술품경매 바로가기</span></a>
+        </div><!--slogan_text-->
+        </div><!--slogan_inner-->
+    </div><!--slogan-->
+
+    <section class="notice">
+        <div class="notice_left">
+        <h2>공지사항</h2>
+        <div class="notice_01">
+        <span class="date">2022-06-13</span>  
+        <span class="notice_text"><a href="#">&nbsp&nbsp[EXHIBITION] 백선영 개인전 ‘Once upon a time’</a></span>
+        </div><!--notice_01-->
+        <div class="notice_01">
+        <span class="date">2022-06-13</span>  
+        <span class="notice_text"><a href="#">&nbsp&nbsp[NEW] 이소연 신작 에디션 4종 출시</a></span>
+        </div><!--notice_01-->
+        <div class="notice_01">
+        <span class="date">2022-06-13</span>  
+        <span class="notice_text"><a href="#">&nbsp&nbsp[EXHIBITION] 임성숙 개인전, ‘Love And Be Happy!’</a></span>
+        </div><!--notice_01-->
+        <div class="notice_01">
+        <span class="date">2022-06-13</span>  
+        <span class="notice_text"><a href="#">&nbsp&nbsp[NEW] 문형태 신작 에디션 1종 출시</a></span>
+        </div><!--notice_01-->
+        <div class="notice_01">
+        <span class="date">2022-06-13</span>  
+        <span class="notice_text"><a href="#">&nbsp&nbsp[NEW] 베지터블플라워스튜디오 신작 에디션 4종 출시</a></span>
+        </div><!--notice_01-->
+        </div><!--notice_left-->
+
+        <div class="notice_right">
+        <h2>뉴스레터</h2>
+        <p>포털아트의 새로운 경매 소식을 받아보세요.</p>
+        <input type="text" class="email" placeholder="이메일 주소를 입력하세요."><br>
+        <input type="text" class="name" placeholder="이름을 입력하세요."><br>
+        <label for="checkbox"><input type="checkbox" class="checkbox"><span>개인정보 수집 및 이용에 동의합니다.</span></label><br>
+        <button type="submit">구독하기</button>
+        </div><!--notice_right-->
+    </section><!--notice-->
+
+    <footer id="footer">
+        <div class="inner">
+        <ul class="footer_info">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">회사연혁</a></li>
+            <li><a href="#">찾아오시는길</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보취급방침</a></li>
+        </ul>
+        <div class="footer_img">
+        <div class="footer_img01">
+            <img src="./img/logomini_img.jpg" alt="">
+        </div><!--footer_img01-->
+        <div class="footer_img02">
+            <img src="./img/kg_logo.png" alt="">
+            <img src="./img/ft_logo.jpg" alt="" class="ft_logo">
+        </div><!--footer_img02-->
+        </div><!--footer_img-->
+        <div class="footer_text">
+            <p>(주)포털아트 ㅣ 서울시 강남구 논현로 101길 7 (역삼동, 중일빌딩 2F) 대표이사 : 이창우</br>
+                사업자등록번호 : 214-87-98176 ㅣ 통신판매업신고 : 제 2009-서울강남 03040호</br>
+                대표전화 : 02-567-1890 팩스 : 02-567-6016 ㅣ 개인정보관리책임자 :김주광
+            </p>
+            <p class="copyright">COPYRIGHTS © 2012 PORTAL ART ALL RIGHTS RESERVED</p>
+        </div><!--footer_text-->
+        </div><!--inner-->
+    </footer>
+
+<div class="toTop"><i class="fa-solid fa-chevron-up"></i></div>
+<div class="toBottom"><i class="fa-solid fa-chevron-down"></i></div>
+
+
+
+</body>
+</html>
