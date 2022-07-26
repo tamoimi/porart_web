@@ -27,7 +27,7 @@ video {
    position: absolute;
    top: 0;
    display: flex;
-   justify-content: space-between;
+   justify-content: space-evenly;
    align-items: center;
    z-index: 999;
 }
@@ -45,7 +45,7 @@ video {
     text-align: center;
 }
 .innerheader img {
-    width: 240px;
+    width: 160px;
     height: auto;
 }
 .innerheader .right {
@@ -53,12 +53,73 @@ video {
     text-align: right;
     margin-right: 30px;
 }
+.fixed_wrap {
+    width: 100%;
+    height: 130px;
+    background-color: white;
+    position: fixed;
+     z-index: 888;
+     opacity: 0;
+}
+.fixed_menu {
+    width: 1240px;
+    margin: 0 auto;
+}
+.fixed_menu .logo {
+    margin-top: 10px;
+}
+.fixed_bt {
+    display: flex;
+    justify-content: space-between;
+}
+#fixed_lnb {
+    display: flex;
+    margin-left: 300px;
+}
+#fixed_lnb li {
+    margin: 10px 24px;
+    position: relative;
+    transition: all 0.4s;
+}
+.fixed_wrap form {
+    margin-top: 10px;
+}
+.fixed_wrap input {
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #999;
+}
+.fixed_wrap button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.fixed_wrap button i {
+    font-size: 20px;
+    margin-left: 5px;
+}
+#fixed_lnb li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #EC912C;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+#fixed_lnb li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+} 
 /* -----------------------header----------------------- */
 
 
 /* -----------------------ham_btn----------------------- */
 #menu {
-    z-index: 2;
+    z-index: 889;
 }
 #menu-bar {
     width: 30px;
@@ -131,62 +192,89 @@ video {
     width: 100%;
     height: 100vh;
 }
-
+.menu_bg .myInfo a {
+    display: inline-block;
+    color: #ccc;
+    margin: 40px 20px;
+}
+.menu_bg .myInfo a:last-child {
+    margin-right: 0;
+}
 /* -----------------------ham_btn----------------------- */
 
+
 /* -----------------------search_bg----------------------- */
-#searchBtn {
-    cursor: pointer;
-}
-/* .search_bg {
-    width: 100%;
-    height: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: height 0.5s;
-} */
-.search_bg form {
-    text-align: center;
-    width: 400px;
-    margin: 0 auto;
-    line-height: 100vh;
-    display: flex;
-    position: absolute;
-    top: 20%;
-    left: 40%;
-}
-#search {
-    width: 0;
-    height:65px;
+.search_box input{
+    width: 500px;
+    height:0;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
-    transition: all 1s;
-    position: relative;
+    transition: all 0.5s;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 10px;
+    z-index: 999;
 }
-.search_bg .btn {
+.searchBtn {
+    position: absolute;
+    top: 53vh;
+    right: 38%;
     border: none;
     font-size: 40px;
     cursor: pointer;
     background-color: transparent;
-    transition: all 1s;
-    position: absolute;
-    right: 20px;
-    top: 13px;
+    transition: all 0.3s;
+    transform: translateY(-50%);
     opacity: 0;
+    z-index: 999;
 }
+.search_btn i {
+    z-index: 9999;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.8s;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+} 
+#closeBtn {
+    color: white;
+    z-index: 999;
+    opacity: 0;
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    top: 46vh;
+    right: 34%;
+}
+.search_bg {
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0,0,0,0.5);
+    transition: height 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* .change_bg {
+    width: 100%; height: 100vh;
+} */
 /* -----------------------search_bg----------------------- */
 
 
 /* -----------------------auction----------------------- */
 .auction {
     width: 100%;
-    height: 360px;
+    height: 320px;
 }
 .auc_inner {
-    width: 1240px;
+    width: 1240px; height: 300px;
     margin: 0 auto;
     margin-top: 60px;
 }
@@ -233,18 +321,6 @@ video {
 .howTo li:hover:after {
     height: 100%;
 }
-.auc_inner .detail {
-    display: block;
-    width: 100px;
-    height: 30px;
-    font-size: 14px;
-    line-height: 30px;
-    background-color: #f2f2f2;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 40px;
-}
-
 /* -----------------------auction----------------------- */
 
 /* -----------------------section----------------------- */
@@ -279,6 +355,17 @@ video {
 .section01 .name {
     font-size: 28px;
     font-weight: bold;
+}
+.section01 .swiper span {
+    display: inline-block;
+    width: 80px; height: 30px;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #333;
+    margin-top: 10px;
+    margin-left: 500px;
+    line-height: 30px;
 }
 .sec_left {
     display: flex;
@@ -350,6 +437,10 @@ video {
     right: 20px;
     color: #EC912C;
     font-size: 20px;
+    cursor: pointer;
+}
+#full_heart {
+    display: none;
 }
 /* -----------------------section----------------------- */
 
@@ -414,7 +505,7 @@ video {
 /* -----------------------slogan----------------------- */
 .slogan {
     padding: 160px 0;
-    background: url(img/oimg04.jpg) no-repeat fixed
+    background: url(img/nimg04.jpg) no-repeat fixed
     center center/100% auto;
 }
 .slogan_inner {
@@ -435,14 +526,17 @@ video {
 }
 .slogan span {
     display: block;
-    text-decoration: underline;
+    border: 1px solid white;
     color: white;
+    font-weight: 500;
     margin-top: 30px;
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-                 0px 8px 13px rgba(0,0,0,0.1),
-                 0px 18px 23px rgba(0,0,0,0.1);
+    padding: 5px;
+    transition: all 0.5s;
 }
-
+.slogan span:hover {
+    background-color: black;
+    color: white;
+}
 /* -----------------------slogan----------------------- */
 
 
@@ -570,7 +664,8 @@ label span{
     color: #666;
 }
 .copyright{
-    margin: 25px 0 5px 0;
+    margin: 25px 0 10px 0;
+    font-size: 12px;
 }
 /* 
 -----------------------footer----------------------- */

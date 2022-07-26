@@ -28,9 +28,7 @@
         <header id="header">
             <div class="innerheader">
                 <div class="ham_btn">
-
                      <div id="menu">
-
                         <div id="menu-bar" onclick="menuOnClick()">
                             <div id="bar1" class="bar"></div>
                             <div id="bar2" class="bar"></div>
@@ -50,6 +48,11 @@
                             <li><a href="#">커뮤니티</a></li>
                             <li><a href="#">문의사항</a></li>
                         </ul>
+                        <div class="myInfo">
+                        <span><a href="#">로그인</a></span>
+                        <span><a href="#">회원가입</a></span>
+                        <span><a href="#">마이페이지</a></span>
+                    </div>
                     </nav>
                 </div>
 
@@ -57,19 +60,51 @@
                     <img src="./img/logo_png.png" alt="">
                 </div>
                 <div class="right">
-                    <div class="searchBtn" id="searchBtn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                </div>
+                    <div class="search_btn">
+                    <i class="fa-solid fa-magnifying-glass" id="openBtn"></i>
+                    </div><!--search_btn-->
+                    <!-- <form action="">
+                    <input type="text" id="search_box">
+                        <button class="search_btn"><i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form> -->
+                    </div><!--right-->
+                
+                <div class="search_bg"></div>
+                <i class="fa-solid fa-xmark" id="closeBtn"></i>
+                    <div class="search_box">
+                    <form action="">
+                    <input type="text" id="search" placeholder="작가명 또는 작품명을 입력하세요.">
+                    <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div><!--search_box-->
+                    </form>
+                <!--search_bg-->
+
+                <div class="fixed_wrap">
+                <div class="fixed_menu">
+                <div class="logo">
+                    <a href="#"><img src="./img/logo_png.png" alt=""></a>
+                </div><!--fixed_menu-->
+                <div class="fixed_bt">
+                <ul id="fixed_lnb">
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">미술품경매</a></li>
+                    <li><a href="#">온라인 전시장</a></li>
+                    <li><a href="#">경매소개</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                    <li><a href="#">문의사항</a></li>
+                </ul>
+                <form action="">
+                    <input type="text" placeholder="작가명 또는 작품명을 입력하세요.">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div><!--search_box-->
+                </form>
+                </div><!--fixed_bt-->
+            </div><!--fixed_menu-->
+            </div><!--fixed_wrap-->
+
             </div><!--innerheader-->
         </header><!--header-->
-
-        <div class="search_bg">
-            <form>
-                <input type="text" name="search" id="search">
-                <button type="button" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
     </div><!--container-->
 
     <section class="auction">
@@ -84,7 +119,6 @@
                 <li>낙찰</li><i class="fa-solid fa-angle-right"></i>
                 <li>배송</li>
             </ul>
-            <a href="#" class="detail">자세히 보기</a>
         </div>
     </section>
     
@@ -97,22 +131,27 @@
           <div class="swiper">
           <div class="swiper-wrapper">
           <div class="swiper-slide"><a href="#"><img src="./img/oimg01.jpg" alt="">
+          <span>해외작가</span>
           <p class="name">초르산비예프.Ch.M</p>
           <p class="label">Pheshin</p>
           </a></div>
           <div class="swiper-slide"><a href="#"><img src="./img/oimg02.jpg" alt="">
+          <span>해외작가</span>
           <p class="name">체렌나드미드 첵미드</p>
           <p class="label">신화</p>
           </a></div>
           <div class="swiper-slide"><a href="#"><img src="./img/oimg03.jpg" alt="">
+          <span>해외작가</span>
           <p class="name">홀마토프</p>
           <p class="label">부하라1</p>
           </a></div>
           <div class="swiper-slide"><a href="#"><img src="./img/img22.jpg" alt="">
+          <span>해외작가</span>
           <p class="name">중쇼우치</p>
           <p class="label">바캉스</p>
           </a></div>
           <div class="swiper-slide"><a href="#"><img src="./img/oimg05.jpg" alt="">
+          <span>해외작가</span>
           <p class="name">림룡순</p>
           <p class="label">조석</p>
           </a></div>
@@ -135,8 +174,8 @@
                         <span>현재가격</span>
                         <p>KRW 400,000</p>
                     </div><!--price--> 
-                    <i class="fa-solid fa-heart"></i>
-                    <i class="fa-regular fa-heart"></i> 
+                    <i class="fa-regular fa-heart" id="em_heart"></i>
+                    <i class="fa-solid fa-heart" id="full_heart"></i>
                 </div><!--sec_img01-->
 
                 <div class="sec_img01 img">
@@ -152,8 +191,8 @@
                         <span>현재가격</span>
                         <p>KRW 500,000</p>
                     </div><!--price-->
-                    <i class="fa-solid fa-heart"></i>
-                    <i class="fa-regular fa-heart"></i> 
+                    <i class="fa-regular fa-heart" id="em_heart"></i>
+                    <i class="fa-solid fa-heart" id="full_heart"></i> 
                 </div><!--sec_img01-->
                 </div><!--sec_img_top-->
 
@@ -172,8 +211,8 @@
                         <span>현재가격</span>
                         <p>KRW 800,000</p>
                     </div><!--price-->
-                    <i class="fa-solid fa-heart"></i>
-                    <i class="fa-regular fa-heart"></i> 
+                    <i class="fa-regular fa-heart" id="em_heart"></i>
+                    <i class="fa-solid fa-heart" id="full_heart"></i>
                 </div><!--sec_img01-->
 
 
@@ -190,8 +229,8 @@
                         <span>현재가격</span>
                         <p>KRW 200,000</p>
                     </div><!--price-->
-                    <i class="fa-solid fa-heart"></i>
-                    <i class="fa-regular fa-heart"></i> 
+                    <i class="fa-regular fa-heart" id="em_heart"></i>
+                    <i class="fa-solid fa-heart" id="full_heart"></i> 
                 </div><!--sec_img01-->
                 </div><!--sec_img_bottom-->
                 </div><!--sec_right-->
@@ -280,7 +319,7 @@
         </ul>
         <div class="footer_img">
         <div class="footer_img01">
-            <img src="./img/logomini_img.jpg" alt="">
+            <a href="#"><img src="./img/logomini_img.jpg" alt=""></a>
         </div><!--footer_img01-->
         <div class="footer_img02">
             <img src="./img/kg_logo.png" alt="">

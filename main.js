@@ -11,30 +11,69 @@ function bgOnClick(){
 }
 
 /*searchBtn*/
-const searchBtn = document.getElementById("searchBtn");
-const search = document.querySelector('#search')
+const searchBtn = document.querySelector("#openBtn");
+const searchBox = document.querySelector('.search_box input')
 const searchBg = document.querySelector('.search_bg')
-const btn = document.querySelector('.btn')
+const search = document.querySelector('.searchBtn')
+const closeBtn = document.querySelector('#closeBtn')
+
 
 searchBtn.addEventListener('click', function(){
-  // searchBg.style.height= '100vh'
-  search.style.width= '400px'
-  btn.style.opacity=1
-
+  searchBg.style.height= '100vh'
+  searchBox.style.height= '65px'
+  search.style.opacity= '1'
+  closeBtn.style.opacity= '1'
+  searchBtn.style.opacity= '0'
 })
 
-btn.addEventListener('click',function(){
-  // searchBg.style.height= '0px'
-  search.style.width= 0
-  btn.style.opacity=0
+searchBg.addEventListener('click', function(){
+  searchBg.style.height= '0'
+  searchBox.style.height= '0'
+  search.style.opacity= '0'
+  closeBtn.style.opacity= '0'
+  searchBtn.style.opacity= '1'
+})
+
+closeBtn.addEventListener('click', function(){
+  searchBg.style.height= '0'
+  searchBox.style.height= '0'
+  search.style.opacity= '0'
+  closeBtn.style.opacity= '0'
+  searchBtn.style.opacity= '1'
+})
+
+/*heartBtn*/
+const emBtn = document.querySelector('#em_heart')
+const fullBtn = document.querySelector('#full_heart')
+
+
+emBtn.addEventListener('click', function(){
+  fullBtn.style.display='block'
+  emBtn.style.display='none'
+})
+
+fullBtn.addEventListener('click', function(){
+  fullBtn.style.display='none'
+  emBtn.style.display='block'
 })
 
 
-// searchBtn.onclick = showDetail
 
-// function showDetail() {
-//   document.querySelector(".search_bg").style.display = 'block';
-// }
+
+/*fixed_menu*/
+const fixed = document.querySelector('.fixed_wrap')
+
+window.addEventListener('scroll', ()=> {
+  if(window.scrollY > 200){
+    gsap.to(fixed, 0.3, {
+      opacity: 1
+    })
+  } else {
+    gsap.to(fixed, 0.3, {
+      opacity: 0
+    })
+  }
+})
 
 /* swiper_notice */
 new Swiper(".sec_left .swiper", {
