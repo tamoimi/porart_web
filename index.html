@@ -22,6 +22,7 @@
     
 </head>
 <body>
+    <section class="smooth-scroll-wrapper">
     <div id="container">
         <video src="./video/김희수작가 인터뷰 필름 l Artist Interview film.mp4" muted autoplay loop>
         </video>
@@ -60,24 +61,18 @@
                     <img src="./img/logo_png.png" alt="">
                 </div>
                 <div class="right">
-                    <div class="search_btn">
+                    <!-- <div class="search_btn">
                     <i class="fa-solid fa-magnifying-glass" id="openBtn"></i>
-                    </div><!--search_btn-->
-                    <!-- <form action="">
-                    <input type="text" id="search_box">
-                        <button class="search_btn"><i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </form> -->
+                    </div>search_btn -->
+                    
+                    <div class="search-box">
+                        <button class="btn-search"><i class="fas fa-search"></i></button>
+                        <input type="text" class="input-search" >
+                      </div>
+                        
+                    
                     </div><!--right-->
-                
-                <div class="search_bg"></div>
-                <i class="fa-solid fa-xmark" id="closeBtn"></i>
-                    <div class="search_box">
-                    <form action="">
-                    <input type="text" id="search" placeholder="작가명 또는 작품명을 입력하세요.">
-                    <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </div><!--search_box-->
-                    </form>
+                    
                 <!--search_bg-->
 
                 <div class="fixed_wrap">
@@ -174,8 +169,8 @@
                         <span>현재가격</span>
                         <p>KRW 400,000</p>
                     </div><!--price--> 
-                    <i class="fa-regular fa-heart" id="em_heart"></i>
-                    <i class="fa-solid fa-heart" id="full_heart"></i>
+                    <i class="fa-regular fa-heart" id="stay"></i>
+                    <i class="fa-solid fa-heart" id="none"></i>
                 </div><!--sec_img01-->
 
                 <div class="sec_img01 img">
@@ -191,8 +186,8 @@
                         <span>현재가격</span>
                         <p>KRW 500,000</p>
                     </div><!--price-->
-                    <i class="fa-regular fa-heart" id="em_heart"></i>
-                    <i class="fa-solid fa-heart" id="full_heart"></i> 
+                    <i class="fa-regular fa-heart" id="stay"></i>
+                    <i class="fa-solid fa-heart" id="none"></i> 
                 </div><!--sec_img01-->
                 </div><!--sec_img_top-->
 
@@ -211,8 +206,8 @@
                         <span>현재가격</span>
                         <p>KRW 800,000</p>
                     </div><!--price-->
-                    <i class="fa-regular fa-heart" id="em_heart"></i>
-                    <i class="fa-solid fa-heart" id="full_heart"></i>
+                    <i class="fa-regular fa-heart" id="stay"></i>
+                    <i class="fa-solid fa-heart" id="none"></i>
                 </div><!--sec_img01-->
 
 
@@ -229,8 +224,8 @@
                         <span>현재가격</span>
                         <p>KRW 200,000</p>
                     </div><!--price-->
-                    <i class="fa-regular fa-heart" id="em_heart"></i>
-                    <i class="fa-solid fa-heart" id="full_heart"></i> 
+                    <i class="fa-regular fa-heart" id="stay"></i>
+                    <i class="fa-solid fa-heart" id="none"></i> 
                 </div><!--sec_img01-->
                 </div><!--sec_img_bottom-->
                 </div><!--sec_right-->
@@ -335,6 +330,7 @@
         </div><!--footer_text-->
         </div><!--inner-->
     </footer>
+</section>
 
 <div class="toTop"><i class="fa-solid fa-chevron-up"></i></div>
 <div class="toBottom"><i class="fa-solid fa-chevron-down"></i></div>

@@ -10,54 +10,13 @@ function bgOnClick(){
   document.getElementById('menu_bg').classList.toggle('change_bg')
 }
 
-/*searchBtn*/
-const searchBtn = document.querySelector("#openBtn");
-const searchBox = document.querySelector('.search_box input')
-const searchBg = document.querySelector('.search_bg')
-const search = document.querySelector('.searchBtn')
-const closeBtn = document.querySelector('#closeBtn')
+const togglingBtns = document.querySelectorAll('.fa-heart'); 
 
-
-searchBtn.addEventListener('click', function(){
-  searchBg.style.height= '100vh'
-  searchBox.style.height= '65px'
-  search.style.opacity= '1'
-  closeBtn.style.opacity= '1'
-  searchBtn.style.opacity= '0'
+togglingBtns.forEach(function(btns){ 
+    btns.addEventListener ("click", function() { 
+        btns.classList.toggle('fas')
+    });
 })
-
-searchBg.addEventListener('click', function(){
-  searchBg.style.height= '0'
-  searchBox.style.height= '0'
-  search.style.opacity= '0'
-  closeBtn.style.opacity= '0'
-  searchBtn.style.opacity= '1'
-})
-
-closeBtn.addEventListener('click', function(){
-  searchBg.style.height= '0'
-  searchBox.style.height= '0'
-  search.style.opacity= '0'
-  closeBtn.style.opacity= '0'
-  searchBtn.style.opacity= '1'
-})
-
-/*heartBtn*/
-const emBtn = document.querySelector('#em_heart')
-const fullBtn = document.querySelector('#full_heart')
-
-
-emBtn.addEventListener('click', function(){
-  fullBtn.style.display='block'
-  emBtn.style.display='none'
-})
-
-fullBtn.addEventListener('click', function(){
-  fullBtn.style.display='none'
-  emBtn.style.display='block'
-})
-
-
 
 
 /*fixed_menu*/
@@ -66,11 +25,13 @@ const fixed = document.querySelector('.fixed_wrap')
 window.addEventListener('scroll', ()=> {
   if(window.scrollY > 200){
     gsap.to(fixed, 0.3, {
-      opacity: 1
+      opacity: 1,
+      display : 'block'
     })
   } else {
     gsap.to(fixed, 0.3, {
-      opacity: 0
+      opacity: 0,
+      display : 'none'
     })
   }
 })
@@ -117,3 +78,12 @@ bottomBtn.addEventListener('click',()=>{
     scrollTo: 3000
   })
 })
+
+
+const clearInput = () => {
+  const input = document.getElementsByTagName("input")[0];
+  input.value = "";
+}
+
+const clearBtn = document.getElementById("clear-btn");
+clearBtn.addEventListener("click", clearInput);
